@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>sandbox</title>
+<style>
+.daz { font-size: 4em;
+                  color: #333333;
+                  font-family: Impact, Charcoal, sans-serif; 
+}
+#daz { margin-top: -1050;
+       margin-left: -1500;
+       left: 30%;
+       top: 30%;
+       position: absolute;
+       z-index: 1;
+}
+#myCan { position: absolute;
+            z-index: 0;
+}
+</style>
+</head>
+<body>
+<div id="myCan">
+<canvas id="myCanvas" width="1200" height="700">
+Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+// Create gradient
+var grd = ctx.createLinearGradient(0,0,500,500);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,1200,700);
+</script>
+<p class="daz" id="daz">You Have Found Us Here</p>
+</body>
+</html>
